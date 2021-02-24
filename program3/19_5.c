@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+int main()
+{
+	FILE *fp;
+
+	fp = fopen("yesdata", "r");
+	assert(fp);
+	printf("yesdata exist\n");
+	fclose(fp);
+
+	fp=fopen("nodata", "r");
+	assert(fp);
+	printf("nodata exist\n");
+	fclose(fp);
+
+	exit(0);
+}
